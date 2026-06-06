@@ -59,7 +59,7 @@ GaussVector Gauss_solve(GaussMatrix &ab)
         {
             sum += ab(i, j) * x[j];
         }
-        
+
         // ab(i, n) — это свободный член b[i] из расширенной матрицы
         x[i] = (ab(i, n) - sum) / ab(i, i);
     }
