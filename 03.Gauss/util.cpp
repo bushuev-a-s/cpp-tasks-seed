@@ -1,6 +1,6 @@
 #include <string>
 #include <iomanip>
-#include <lazycsv.hpp>
+#include "lazycsv.hpp"
 
 #include "util.h"
 

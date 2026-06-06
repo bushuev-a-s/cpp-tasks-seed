@@ -2,7 +2,7 @@
 #include <string>
 
 #include <Eigen/Dense>
-#include <lazycsv.hpp>
+#include "lazycsv.hpp"
 
 #include "util.h"
 
