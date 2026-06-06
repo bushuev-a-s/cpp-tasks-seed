@@ -11,10 +11,13 @@ template <typename Iterator>
 void bubble_sort(Iterator begin, Iterator end)
 {
     bool swapped = true;
-    while (swapped) {
+    while (swapped)
+    {
         swapped = false;
-        for (Iterator it = begin; std::next(it) != end; ++it) {
-            if (*std::next(it) < *it) {
+        for (Iterator it = begin; std::next(it) != end; ++it)
+        {
+            if (*std::next(it) < *it)
+            {
                 std::iter_swap(it, std::next(it));
                 swapped = true;
             }
@@ -27,14 +30,17 @@ template <typename Iterator>
 void quick_sort(Iterator begin, Iterator end)
 {
     // чтобы не возникло риска бесконечной рекурсии
-    if (begin == end || std::next(begin) == end) {
+    if (begin == end || std::next(begin) == end)
+    {
         return;
     }
 
     auto pivot = *std::prev(end);
     auto i = begin;
-    for (auto j = begin; j != std::prev(end); ++j) {
-        if (*j < pivot) {
+    for (auto j = begin; j != std::prev(end); ++j)
+    {
+        if (*j < pivot)
+        {
             std::iter_swap(i, j);
             ++i;
         }
